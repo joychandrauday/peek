@@ -1,5 +1,5 @@
-use crate::ai::types::AIConfig;
 use crate::ai::query_openrouter;
+use crate::ai::types::AIConfig;
 use crate::db::{get_db_path, Database};
 use rusqlite::params;
 use serde::{Deserialize, Serialize};
@@ -15,15 +15,7 @@ pub struct SearchResult {
     pub score: f64,
 }
 
-#[tauri::command]
-pub async fn search_commands(
-    query: String,
-    ai_config: Option<AIConfig>,
-    app_handle: AppHandle,
-) -> Result<Vec<SearchResult>, String> {
-    let db_path = get_db_path(&app_handle);
-    let db = Database::new(&db_path).map_err(|e| e.to_string())?;
-
+fn search_local(db: &Database, query: &str) -> Result<Vec<SearchResult>, String> {
     let mut stmt = db
         .conn
         .prepare("SELECT id, title, answer, category, tags FROM commands")
@@ -43,6 +35,8 @@ pub async fn search_commands(
         .filter_map(|r| r.ok())
         .collect();
 
+    drop(stmt);
+
     let query_lower = query.to_lowercase();
     let query_words: Vec<&str> = query_lower.split_whitespace().collect();
 
@@ -52,32 +46,20 @@ pub async fn search_commands(
             let title_lower = title.to_lowercase();
             let answer_lower = answer.to_lowercase();
             let tags_lower = tags.as_deref().unwrap_or("").to_lowercase();
-            let category_lower = category.to_lowercase();
 
             let mut score = 0.0;
 
-            // Exact title match (highest priority)
             if title_lower == query_lower {
                 score = 100.0;
-            }
-            // Title starts with query
-            else if title_lower.starts_with(&query_lower) {
+            } else if title_lower.starts_with(&query_lower) {
                 score = 90.0;
-            }
-            // Title contains query
-            else if title_lower.contains(&query_lower) {
+            } else if title_lower.contains(&query_lower) {
                 score = 80.0;
-            }
-            // Answer contains query
-            else if answer_lower.contains(&query_lower) {
+            } else if answer_lower.contains(&query_lower) {
                 score = 70.0;
-            }
-            // Tag match
-            else if tags_lower.contains(&query_lower) {
+            } else if tags_lower.contains(&query_lower) {
                 score = 60.0;
-            }
-            // Word-by-word matching
-            else {
+            } else {
                 let matched_words = query_words
                     .iter()
                     .filter(|word| {
@@ -110,7 +92,6 @@ pub async fn search_commands(
     results.sort_by(|a, b| b.score.partial_cmp(&a.score).unwrap());
     results.truncate(10);
 
-    // Update usage count for top result
     if let Some(top) = results.first() {
         let _ = db.conn.execute(
             "UPDATE commands SET usage_count = usage_count + 1 WHERE id = ?1",
@@ -118,30 +99,40 @@ pub async fn search_commands(
         );
     }
 
-    // AI fallback: if top result score < 50 and AI config provided, query AI
+    Ok(results)
+}
+
+#[tauri::command]
+pub async fn search_commands(
+    query: String,
+    ai_config: Option<AIConfig>,
+    app_handle: AppHandle,
+) -> Result<Vec<SearchResult>, String> {
+    let db_path = get_db_path(&app_handle);
+    let db = Database::new(&db_path).map_err(|e| e.to_string())?;
+
+    let mut results = search_local(&db, &query)?;
+
+    drop(db);
+
     let should_use_ai = results.is_empty()
         || results.first().map(|r| r.score < 50.0).unwrap_or(false);
 
     if should_use_ai {
         if let Some(config) = ai_config {
             if !config.api_key.is_empty() {
-                match query_openrouter(&config, &query).await {
-                    Ok(ai_answer) => {
-                        results.insert(
-                            0,
-                            SearchResult {
-                                id: -1,
-                                title: "AI Answer".to_string(),
-                                answer: ai_answer,
-                                category: "ai".to_string(),
-                                tags: Some("ai,generated".to_string()),
-                                score: 95.0,
-                            },
-                        );
-                    }
-                    Err(e) => {
-                        eprintln!("AI fallback failed: {}", e);
-                    }
+                if let Ok(ai_answer) = query_openrouter(&config, &query).await {
+                    results.insert(
+                        0,
+                        SearchResult {
+                            id: -1,
+                            title: "AI Answer".to_string(),
+                            answer: ai_answer,
+                            category: "ai".to_string(),
+                            tags: Some("ai,generated".to_string()),
+                            score: 95.0,
+                        },
+                    );
                 }
             }
         }

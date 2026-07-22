@@ -1,6 +1,5 @@
-use crate::ai::types::AIConfig;
 use crate::ai::query_openrouter;
-use tauri::AppHandle;
+use crate::ai::types::AIConfig;
 
 #[tauri::command]
 pub async fn query_ai(query: String, config: AIConfig) -> Result<String, String> {
