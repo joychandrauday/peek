@@ -1,0 +1,242 @@
+[
+  {
+    "title": "Create functional component",
+    "answer": "function Component() { return <div></div>; }",
+    "category": "react",
+    "tags": "component,create,functional"
+  },
+  {
+    "title": "Arrow function component",
+    "answer": "const Component = () => <div></div>",
+    "category": "react",
+    "tags": "component,arrow,create"
+  },
+  {
+    "title": "useState hook",
+    "answer": "const [state, setState] = useState(initialValue)",
+    "category": "react",
+    "tags": "hook,state,useState"
+  },
+  {
+    "title": "useEffect hook",
+    "answer": "useEffect(() => { code }, [deps])",
+    "category": "react",
+    "tags": "hook,effect,side-effect"
+  },
+  {
+    "title": "useEffect cleanup",
+    "answer": "useEffect(() => { return () => cleanup(); }, [])",
+    "category": "react",
+    "tags": "hook,effect,cleanup"
+  },
+  {
+    "title": "useContext hook",
+    "answer": "const value = useContext(MyContext)",
+    "category": "react",
+    "tags": "hook,context,useContext"
+  },
+  {
+    "title": "useRef hook",
+    "answer": "const ref = useRef(initialValue)",
+    "category": "react",
+    "tags": "hook,ref,useRef"
+  },
+  {
+    "title": "useMemo hook",
+    "answer": "const memoized = useMemo(() => compute(value), [value])",
+    "category": "react",
+    "tags": "hook,memo,performance"
+  },
+  {
+    "title": "useCallback hook",
+    "answer": "const callback = useCallback(() => { code }, [deps])",
+    "category": "react",
+    "tags": "hook,callback,memo"
+  },
+  {
+    "title": "useReducer hook",
+    "answer": "const [state, dispatch] = useReducer(reducer, initial)",
+    "category": "react",
+    "tags": "hook,reducer,state"
+  },
+  {
+    "title": "useLayoutEffect hook",
+    "answer": "useLayoutEffect(() => { code }, [deps])",
+    "category": "react",
+    "tags": "hook,effect,layout"
+  },
+  {
+    "title": "useImperativeHandle hook",
+    "answer": "useImperativeHandle(ref, () => ({ method }))",
+    "category": "react",
+    "tags": "hook,ref,imperative"
+  },
+  {
+    "title": "Conditional rendering",
+    "answer": "{condition && <Component />}",
+    "category": "react",
+    "tags": "condition,render,if"
+  },
+  {
+    "title": "Ternary rendering",
+    "answer": "{condition ? <A /> : <B />}",
+    "category": "react",
+    "tags": "condition,ternary,if-else"
+  },
+  {
+    "title": "List rendering",
+    "answer": "{array.map(item => <Component key={item.id} />)}",
+    "category": "react",
+    "tags": "list,map,render,array"
+  },
+  {
+    "title": "Props",
+    "answer": "function Component({ prop1, prop2 }) {}",
+    "category": "react",
+    "tags": "props,pass,data"
+  },
+  {
+    "title": "Default props",
+    "answer": "function Component({ prop = 'default' }) {}",
+    "category": "react",
+    "tags": "props,default,value"
+  },
+  {
+    "title": "Children prop",
+    "answer": "function Layout({ children }) { return <div>{children}</div>; }",
+    "category": "react",
+    "tags": "children,nest,wrapper"
+  },
+  {
+    "title": "React Router",
+    "answer": "<Route path=\"/\" element={<Home />} />",
+    "category": "react",
+    "tags": "router,route,navigate"
+  },
+  {
+    "title": "Navigate hook",
+    "answer": "const navigate = useNavigate(); navigate('/path')",
+    "category": "react",
+    "tags": "router,navigate,programmatic"
+  },
+  {
+    "title": "Form handling",
+    "answer": "const handleSubmit = (e) => { e.preventDefault(); }",
+    "category": "react",
+    "tags": "form,submit,handle"
+  },
+  {
+    "title": "Controlled input",
+    "answer": "<input value={value} onChange={(e) => setValue(e.target.value)} />",
+    "category": "react",
+    "tags": "input,controlled,form"
+  },
+  {
+    "title": "Context Provider",
+    "answer": "<MyContext.Provider value={value}>{children}</MyContext.Provider>",
+    "category": "react",
+    "tags": "context,provider,share"
+  },
+  {
+    "title": "Create context",
+    "answer": "const MyContext = createContext(defaultValue)",
+    "category": "react",
+    "tags": "context,create,define"
+  },
+  {
+    "title": "Forward ref",
+    "answer": "const Component = forwardRef((props, ref) => <div ref={ref} />)",
+    "category": "react",
+    "tags": "ref,forward,access"
+  },
+  {
+    "title": "Lazy loading",
+    "answer": "const LazyComponent = lazy(() => import('./Component'))",
+    "category": "react",
+    "tags": "lazy,load,dynamic"
+  },
+  {
+    "title": "Suspense",
+    "answer": "<Suspense fallback={<Loading />}><Component /></Suspense>",
+    "category": "react",
+    "tags": "suspense,loading,fallback"
+  },
+  {
+    "title": "Error boundary",
+    "answer": "componentDidCatch(error, info) { handleError(error); }",
+    "category": "react",
+    "tags": "error,catch,boundary"
+  },
+  {
+    "title": "Fragment",
+    "answer": "<><Child1 /><Child2 /></>",
+    "category": "react",
+    "tags": "fragment,wrapper,group"
+  },
+  {
+    "title": "Portal",
+    "answer": "createPortal(<Child />, document.getElementById('root'))",
+    "category": "react",
+    "tags": "portal,render,external"
+  },
+  {
+    "title": "key prop",
+    "answer": "<Component key={uniqueId} />",
+    "category": "react",
+    "tags": "key,identity,list"
+  },
+  {
+    "title": "cloneElement",
+    "answer": "cloneElement(element, { prop: value })",
+    "category": "react",
+    "tags": "clone,element,modify"
+  },
+  {
+    "title": "isValidElement",
+    "answer": "isValidElement(object)",
+    "category": "react",
+    "tags": "check,element,valid"
+  },
+  {
+    "title": "useId hook",
+    "answer": "const id = useId()",
+    "category": "react",
+    "tags": "hook,id,unique"
+  },
+  {
+    "title": "useTransition hook",
+    "answer": "const [isPending, startTransition] = useTransition()",
+    "category": "react",
+    "tags": "hook,transition,priority"
+  },
+  {
+    "title": "useDeferredValue hook",
+    "answer": "const deferredValue = useDeferredValue(value)",
+    "category": "react",
+    "tags": "hook,deferred,performance"
+  },
+  {
+    "title": "useSyncExternalStore hook",
+    "answer": "const value = useSyncExternalStore(subscribe, getSnapshot)",
+    "category": "react",
+    "tags": "hook,external,store"
+  },
+  {
+    "title": "StrictMode",
+    "answer": "<StrictMode><App /></StrictMode>",
+    "category": "react",
+    "tags": "strict,mode,debug"
+  },
+  {
+    "title": "useDebugValue hook",
+    "answer": "useDebugValue(value, format)",
+    "category": "react",
+    "tags": "hook,debug,devtools"
+  },
+  {
+    "title": "Custom hook",
+    "answer": "function useCustomHook() { return { value }; }",
+    "category": "react",
+    "tags": "hook,custom,extract"
+  }
+]

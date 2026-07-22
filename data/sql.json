@@ -1,0 +1,290 @@
+[
+  {
+    "title": "Create table",
+    "answer": "CREATE TABLE users (id INT PRIMARY KEY, name VARCHAR(100));",
+    "category": "sql",
+    "tags": "create,table,define"
+  },
+  {
+    "title": "Create table with auto increment",
+    "answer": "CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(100));",
+    "category": "sql",
+    "tags": "create,table,auto"
+  },
+  {
+    "title": "Select data",
+    "answer": "SELECT * FROM users WHERE id = 1;",
+    "category": "sql",
+    "tags": "select,query,fetch"
+  },
+  {
+    "title": "Select specific columns",
+    "answer": "SELECT name, email FROM users;",
+    "category": "sql",
+    "tags": "select,columns,specific"
+  },
+  {
+    "title": "Select with limit",
+    "answer": "SELECT * FROM users LIMIT 10;",
+    "category": "sql",
+    "tags": "select,limit,restrict"
+  },
+  {
+    "title": "Insert data",
+    "answer": "INSERT INTO users (name, email) VALUES ('John', 'john@example.com');",
+    "category": "sql",
+    "tags": "insert,add,new"
+  },
+  {
+    "title": "Insert multiple rows",
+    "answer": "INSERT INTO users (name, email) VALUES ('John', 'john@example.com'), ('Jane', 'jane@example.com');",
+    "category": "sql",
+    "tags": "insert,multiple,bulk"
+  },
+  {
+    "title": "Update data",
+    "answer": "UPDATE users SET name = 'Jane' WHERE id = 1;",
+    "category": "sql",
+    "tags": "update,modify,change"
+  },
+  {
+    "title": "Delete data",
+    "answer": "DELETE FROM users WHERE id = 1;",
+    "category": "sql",
+    "tags": "delete,remove,row"
+  },
+  {
+    "title": "Delete all rows",
+    "answer": "DELETE FROM users;",
+    "category": "sql",
+    "tags": "delete,all,truncate"
+  },
+  {
+    "title": "Join tables",
+    "answer": "SELECT * FROM users JOIN orders ON users.id = orders.user_id;",
+    "category": "sql",
+    "tags": "join,combine,relate"
+  },
+  {
+    "title": "Left join",
+    "answer": "SELECT * FROM users LEFT JOIN orders ON users.id = orders.user_id;",
+    "category": "sql",
+    "tags": "left,join,include"
+  },
+  {
+    "title": "Right join",
+    "answer": "SELECT * FROM users RIGHT JOIN orders ON users.id = orders.user_id;",
+    "category": "sql",
+    "tags": "right,join,include"
+  },
+  {
+    "title": "Full outer join",
+    "answer": "SELECT * FROM users FULL OUTER JOIN orders ON users.id = orders.user_id;",
+    "category": "sql",
+    "tags": "full,outer,join"
+  },
+  {
+    "title": "Group by",
+    "answer": "SELECT category, COUNT(*) FROM products GROUP BY category;",
+    "category": "sql",
+    "tags": "group,aggregate,count"
+  },
+  {
+    "title": "Having clause",
+    "answer": "SELECT category, COUNT(*) FROM products GROUP BY category HAVING COUNT(*) > 5;",
+    "category": "sql",
+    "tags": "having,filter,aggregate"
+  },
+  {
+    "title": "Order by",
+    "answer": "SELECT * FROM users ORDER BY name ASC;",
+    "category": "sql",
+    "tags": "order,sort,asc"
+  },
+  {
+    "title": "Order by descending",
+    "answer": "SELECT * FROM users ORDER BY created_at DESC;",
+    "category": "sql",
+    "tags": "order,sort,desc"
+  },
+  {
+    "title": "Limit results",
+    "answer": "SELECT * FROM users LIMIT 10;",
+    "category": "sql",
+    "tags": "limit,restrict,page"
+  },
+  {
+    "title": "Offset for pagination",
+    "answer": "SELECT * FROM users LIMIT 10 OFFSET 20;",
+    "category": "sql",
+    "tags": "offset,pagination,page"
+  },
+  {
+    "title": "Create index",
+    "answer": "CREATE INDEX idx_name ON users(name);",
+    "category": "sql",
+    "tags": "index,performance,fast"
+  },
+  {
+    "title": "Create unique index",
+    "answer": "CREATE UNIQUE INDEX idx_email ON users(email);",
+    "category": "sql",
+    "tags": "index,unique,constraint"
+  },
+  {
+    "title": "Drop index",
+    "answer": "DROP INDEX idx_name;",
+    "category": "sql",
+    "tags": "index,drop,remove"
+  },
+  {
+    "title": "Drop table",
+    "answer": "DROP TABLE users;",
+    "category": "sql",
+    "tags": "drop,delete,remove,table"
+  },
+  {
+    "title": "Alter table add column",
+    "answer": "ALTER TABLE users ADD COLUMN age INT;",
+    "category": "sql",
+    "tags": "alter,modify,add,column"
+  },
+  {
+    "title": "Alter table drop column",
+    "answer": "ALTER TABLE users DROP COLUMN age;",
+    "category": "sql",
+    "tags": "alter,modify,drop,column"
+  },
+  {
+    "title": "Alter table rename",
+    "answer": "ALTER TABLE users RENAME TO customers;",
+    "category": "sql",
+    "tags": "alter,rename,table"
+  },
+  {
+    "title": "Subquery",
+    "answer": "SELECT * FROM users WHERE id IN (SELECT user_id FROM orders);",
+    "category": "sql",
+    "tags": "subquery,nest,select"
+  },
+  {
+    "title": "Correlated subquery",
+    "answer": "SELECT * FROM users u WHERE EXISTS (SELECT 1 FROM orders o WHERE o.user_id = u.id);",
+    "category": "sql",
+    "tags": "subquery,correlated,exists"
+  },
+  {
+    "title": "Union",
+    "answer": "SELECT name FROM users UNION SELECT name FROM admins;",
+    "category": "sql",
+    "tags": "union,combine,merge"
+  },
+  {
+    "title": "Union all",
+    "answer": "SELECT name FROM users UNION ALL SELECT name FROM admins;",
+    "category": "sql",
+    "tags": "union,all,duplicates"
+  },
+  {
+    "title": "Transaction",
+    "answer": "BEGIN TRANSACTION; INSERT INTO users...; COMMIT;",
+    "category": "sql",
+    "tags": "transaction,commit,rollback"
+  },
+  {
+    "title": "Rollback",
+    "answer": "ROLLBACK;",
+    "category": "sql",
+    "tags": "rollback,undo,transaction"
+  },
+  {
+    "title": "View",
+    "answer": "CREATE VIEW active_users AS SELECT * FROM users WHERE active = 1;",
+    "category": "sql",
+    "tags": "view,stored,query"
+  },
+  {
+    "title": "Drop view",
+    "answer": "DROP VIEW active_users;",
+    "category": "sql",
+    "tags": "view,drop,remove"
+  },
+  {
+    "title": "Count rows",
+    "answer": "SELECT COUNT(*) FROM users;",
+    "category": "sql",
+    "tags": "count,aggregate,total"
+  },
+  {
+    "title": "Sum values",
+    "answer": "SELECT SUM(amount) FROM orders;",
+    "category": "sql",
+    "tags": "sum,aggregate,total"
+  },
+  {
+    "title": "Average",
+    "answer": "SELECT AVG(price) FROM products;",
+    "category": "sql",
+    "tags": "avg,average,aggregate"
+  },
+  {
+    "title": "Min and Max",
+    "answer": "SELECT MIN(price), MAX(price) FROM products;",
+    "category": "sql",
+    "tags": "min,max,range"
+  },
+  {
+    "title": "Like operator",
+    "answer": "SELECT * FROM users WHERE name LIKE '%john%';",
+    "category": "sql",
+    "tags": "like,pattern,search"
+  },
+  {
+    "title": "Between operator",
+    "answer": "SELECT * FROM users WHERE age BETWEEN 25 AND 35;",
+    "category": "sql",
+    "tags": "between,range,filter"
+  },
+  {
+    "title": "In operator",
+    "answer": "SELECT * FROM users WHERE id IN (1, 2, 3);",
+    "category": "sql",
+    "tags": "in,list,filter"
+  },
+  {
+    "title": "Is null",
+    "answer": "SELECT * FROM users WHERE email IS NULL;",
+    "category": "sql",
+    "tags": "null,check,empty"
+  },
+  {
+    "title": "Is not null",
+    "answer": "SELECT * FROM users WHERE email IS NOT NULL;",
+    "category": "sql",
+    "tags": "null,check,exists"
+  },
+  {
+    "title": "Case statement",
+    "answer": "CASE WHEN condition THEN result ELSE default END",
+    "category": "sql",
+    "tags": "case,conditional,if"
+  },
+  {
+    "title": "Cast type",
+    "answer": "CAST(value AS VARCHAR)",
+    "category": "sql",
+    "tags": "cast,convert,type"
+  },
+  {
+    "title": "String concat",
+    "answer": "CONCAT(first_name, ' ', last_name)",
+    "category": "sql",
+    "tags": "concat,join,string"
+  },
+  {
+    "title": "Current timestamp",
+    "answer": "CURRENT_TIMESTAMP",
+    "category": "sql",
+    "tags": "timestamp,now,date"
+  }
+]

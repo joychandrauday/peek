@@ -1,0 +1,302 @@
+[
+  {
+    "title": "List files",
+    "answer": "ls -la",
+    "category": "linux",
+    "tags": "list,files,show"
+  },
+  {
+    "title": "Change directory",
+    "answer": "cd /path/to/dir",
+    "category": "linux",
+    "tags": "directory,change,navigate"
+  },
+  {
+    "title": "Print working directory",
+    "answer": "pwd",
+    "category": "linux",
+    "tags": "directory,current,where"
+  },
+  {
+    "title": "Create directory",
+    "answer": "mkdir directory_name",
+    "category": "linux",
+    "tags": "create,directory,folder"
+  },
+  {
+    "title": "Create nested directories",
+    "answer": "mkdir -p path/to/dir",
+    "category": "linux",
+    "tags": "create,directory,nested"
+  },
+  {
+    "title": "Remove file",
+    "answer": "rm file.txt",
+    "category": "linux",
+    "tags": "remove,delete,file"
+  },
+  {
+    "title": "Remove directory",
+    "answer": "rm -rf directory_name",
+    "category": "linux",
+    "tags": "remove,delete,directory"
+  },
+  {
+    "title": "Copy file",
+    "answer": "cp source.txt dest.txt",
+    "category": "linux",
+    "tags": "copy,duplicate,file"
+  },
+  {
+    "title": "Copy directory recursively",
+    "answer": "cp -r source/ dest/",
+    "category": "linux",
+    "tags": "copy,directory,recursive"
+  },
+  {
+    "title": "Move/rename file",
+    "answer": "mv old.txt new.txt",
+    "category": "linux",
+    "tags": "move,rename,file"
+  },
+  {
+    "title": "Find files",
+    "answer": "find /path -name \"*.txt\"",
+    "category": "linux",
+    "tags": "find,search,locate"
+  },
+  {
+    "title": "Find by type",
+    "answer": "find /path -type f -name \"*.log\"",
+    "category": "linux",
+    "tags": "find,type,filter"
+  },
+  {
+    "title": "Search in files",
+    "answer": "grep -r \"pattern\" /path",
+    "category": "linux",
+    "tags": "search,grep,find,text"
+  },
+  {
+    "title": "Search with regex",
+    "answer": "grep -E \"regex_pattern\" file.txt",
+    "category": "linux",
+    "tags": "search,grep,regex"
+  },
+  {
+    "title": "View file content",
+    "answer": "cat file.txt",
+    "category": "linux",
+    "tags": "view,show,read,file"
+  },
+  {
+    "title": "View first lines",
+    "answer": "head -n 20 file.txt",
+    "category": "linux",
+    "tags": "head,first,lines"
+  },
+  {
+    "title": "View last lines",
+    "answer": "tail -n 20 file.txt",
+    "category": "linux",
+    "tags": "tail,last,lines"
+  },
+  {
+    "title": "Follow file changes",
+    "answer": "tail -f file.txt",
+    "category": "linux",
+    "tags": "tail,follow,monitor"
+  },
+  {
+    "title": "Edit file with vim",
+    "answer": "vim file.txt",
+    "category": "linux",
+    "tags": "edit,vim,modify"
+  },
+  {
+    "title": "Edit file with nano",
+    "answer": "nano file.txt",
+    "category": "linux",
+    "tags": "edit,nano,modify"
+  },
+  {
+    "title": "Check disk space",
+    "answer": "df -h",
+    "category": "linux",
+    "tags": "disk,space,usage"
+  },
+  {
+    "title": "Check directory size",
+    "answer": "du -sh /path/to/dir",
+    "category": "linux",
+    "tags": "du,size,directory"
+  },
+  {
+    "title": "Check memory usage",
+    "answer": "free -h",
+    "category": "linux",
+    "tags": "memory,usage,ram"
+  },
+  {
+    "title": "View running processes",
+    "answer": "ps aux",
+    "category": "linux",
+    "tags": "process,running,show"
+  },
+  {
+    "title": "Kill process by ID",
+    "answer": "kill -9 PID",
+    "category": "linux",
+    "tags": "kill,stop,process"
+  },
+  {
+    "title": "Kill process by name",
+    "answer": "pkill process_name",
+    "category": "linux",
+    "tags": "kill,stop,name"
+  },
+  {
+    "title": "View system info",
+    "answer": "uname -a",
+    "category": "linux",
+    "tags": "system,info,kernel"
+  },
+  {
+    "title": "Check network config",
+    "answer": "ip addr show",
+    "category": "linux",
+    "tags": "network,ip,interface"
+  },
+  {
+    "title": "Check open ports",
+    "answer": "netstat -tuln",
+    "category": "linux",
+    "tags": "network,ports,listening"
+  },
+  {
+    "title": "Download file",
+    "answer": "wget https://example.com/file",
+    "category": "linux",
+    "tags": "download,fetch,url"
+  },
+  {
+    "title": "Download with curl",
+    "answer": "curl -O https://example.com/file",
+    "category": "linux",
+    "tags": "download,curl,url"
+  },
+  {
+    "title": "View file permissions",
+    "answer": "ls -l file.txt",
+    "category": "linux",
+    "tags": "permissions,mode,access"
+  },
+  {
+    "title": "Change permissions",
+    "answer": "chmod 755 file.txt",
+    "category": "linux",
+    "tags": "permissions,change,mode"
+  },
+  {
+    "title": "Change owner",
+    "answer": "chown user:group file.txt",
+    "category": "linux",
+    "tags": "owner,change,user"
+  },
+  {
+    "title": "Search command history",
+    "answer": "history | grep command",
+    "category": "linux",
+    "tags": "history,search,command"
+  },
+  {
+    "title": "Clear terminal",
+    "answer": "clear",
+    "category": "linux",
+    "tags": "clear,screen,terminal"
+  },
+  {
+    "title": "Create symbolic link",
+    "answer": "ln -s /path/to/target link_name",
+    "category": "linux",
+    "tags": "symlink,link,shortcut"
+  },
+  {
+    "title": "View environment variables",
+    "answer": "env",
+    "category": "linux",
+    "tags": "env,variables,environment"
+  },
+  {
+    "title": "Set environment variable",
+    "answer": "export VAR_NAME=value",
+    "category": "linux",
+    "tags": "export,variable,set"
+  },
+  {
+    "title": "Schedule task with cron",
+    "answer": "crontab -e",
+    "category": "linux",
+    "tags": "cron,schedule,timer"
+  },
+  {
+    "title": "View running services",
+    "answer": "systemctl status",
+    "category": "linux",
+    "tags": "systemctl,services,status"
+  },
+  {
+    "title": "Start service",
+    "answer": "systemctl start service_name",
+    "category": "linux",
+    "tags": "systemctl,start,service"
+  },
+  {
+    "title": "Stop service",
+    "answer": "systemctl stop service_name",
+    "category": "linux",
+    "tags": "systemctl,stop,service"
+  },
+  {
+    "title": "Create tar archive",
+    "answer": "tar -czf archive.tar.gz /path/to/dir",
+    "category": "linux",
+    "tags": "tar,archive,compress"
+  },
+  {
+    "title": "Extract tar archive",
+    "answer": "tar -xzf archive.tar.gz",
+    "category": "linux",
+    "tags": "tar,extract,uncompress"
+  },
+  {
+    "title": "Sort file contents",
+    "answer": "sort file.txt",
+    "category": "linux",
+    "tags": "sort,order,lines"
+  },
+  {
+    "title": "Count lines, words, chars",
+    "answer": "wc file.txt",
+    "category": "linux",
+    "tags": "wc,count,lines"
+  },
+  {
+    "title": "Pipe output",
+    "answer": "command1 | command2",
+    "category": "linux",
+    "tags": "pipe,chain,redirect"
+  },
+  {
+    "title": "Redirect output to file",
+    "answer": "command > file.txt",
+    "category": "linux",
+    "tags": "redirect,write,output"
+  },
+  {
+    "title": "Append output to file",
+    "answer": "command >> file.txt",
+    "category": "linux",
+    "tags": "append,write,output"
+  }
+]

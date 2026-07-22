@@ -1,0 +1,212 @@
+[
+  {
+    "title": "Create git branch",
+    "answer": "git checkout -b branch-name",
+    "category": "git",
+    "tags": "branch,new,create"
+  },
+  {
+    "title": "Switch git branch",
+    "answer": "git checkout branch-name",
+    "category": "git",
+    "tags": "branch,switch,checkout"
+  },
+  {
+    "title": "Delete git branch",
+    "answer": "git branch -d branch-name",
+    "category": "git",
+    "tags": "branch,delete,remove"
+  },
+  {
+    "title": "Stage all changes",
+    "answer": "git add .",
+    "category": "git",
+    "tags": "stage,add,all"
+  },
+  {
+    "title": "Stage specific file",
+    "answer": "git add file.txt",
+    "category": "git",
+    "tags": "stage,add,file"
+  },
+  {
+    "title": "Unstage file",
+    "answer": "git reset HEAD file.txt",
+    "category": "git",
+    "tags": "unstage,reset,remove"
+  },
+  {
+    "title": "Commit changes",
+    "answer": "git commit -m \"message\"",
+    "category": "git",
+    "tags": "commit,save,message"
+  },
+  {
+    "title": "Amend last commit",
+    "answer": "git commit --amend",
+    "category": "git",
+    "tags": "amend,fix,commit"
+  },
+  {
+    "title": "Undo last commit (keep changes)",
+    "answer": "git reset --soft HEAD~1",
+    "category": "git",
+    "tags": "undo,reset,commit"
+  },
+  {
+    "title": "Undo last commit (discard changes)",
+    "answer": "git reset --hard HEAD~1",
+    "category": "git",
+    "tags": "undo,reset,hard,commit"
+  },
+  {
+    "title": "View git log",
+    "answer": "git log --oneline",
+    "category": "git",
+    "tags": "log,history,show"
+  },
+  {
+    "title": "View git log with graph",
+    "answer": "git log --oneline --graph --all",
+    "category": "git",
+    "tags": "log,graph,visualize"
+  },
+  {
+    "title": "View git status",
+    "answer": "git status",
+    "category": "git",
+    "tags": "status,check,show"
+  },
+  {
+    "title": "Create git tag",
+    "answer": "git tag -a v1.0.0 -m \"message\"",
+    "category": "git",
+    "tags": "tag,create,version"
+  },
+  {
+    "title": "Push to remote",
+    "answer": "git push origin branch-name",
+    "category": "git",
+    "tags": "push,remote,upload"
+  },
+  {
+    "title": "Force push",
+    "answer": "git push --force-with-lease",
+    "category": "git",
+    "tags": "push,force,remote"
+  },
+  {
+    "title": "Pull from remote",
+    "answer": "git pull origin branch-name",
+    "category": "git",
+    "tags": "pull,remote,download"
+  },
+  {
+    "title": "Clone repository",
+    "answer": "git clone https://github.com/user/repo.git",
+    "category": "git",
+    "tags": "clone,download,repository"
+  },
+  {
+    "title": "Stash changes",
+    "answer": "git stash",
+    "category": "git",
+    "tags": "stash,save,temporary"
+  },
+  {
+    "title": "Apply stashed changes",
+    "answer": "git stash pop",
+    "category": "git",
+    "tags": "stash,apply,restore"
+  },
+  {
+    "title": "View diff",
+    "answer": "git diff",
+    "category": "git",
+    "tags": "diff,changes,compare"
+  },
+  {
+    "title": "View staged diff",
+    "answer": "git diff --staged",
+    "category": "git",
+    "tags": "diff,staged,compare"
+  },
+  {
+    "title": "Merge branch",
+    "answer": "git merge branch-name",
+    "category": "git",
+    "tags": "merge,combine,branch"
+  },
+  {
+    "title": "Rebase branch",
+    "answer": "git rebase branch-name",
+    "category": "git",
+    "tags": "rebase,rewrite,history"
+  },
+  {
+    "title": "Cherry-pick commit",
+    "answer": "git cherry-pick commit-hash",
+    "category": "git",
+    "tags": "cherry-pick,copy,commit"
+  },
+  {
+    "title": "Reset file to last commit",
+    "answer": "git checkout -- file.txt",
+    "category": "git",
+    "tags": "reset,revert,file"
+  },
+  {
+    "title": "List branches",
+    "answer": "git branch -a",
+    "category": "git",
+    "tags": "branch,list,show"
+  },
+  {
+    "title": "Rename branch",
+    "answer": "git branch -m old-name new-name",
+    "category": "git",
+    "tags": "branch,rename,change"
+  },
+  {
+    "title": "Fetch remote",
+    "answer": "git fetch origin",
+    "category": "git",
+    "tags": "fetch,remote,update"
+  },
+  {
+    "title": "Remove untracked files",
+    "answer": "git clean -fd",
+    "category": "git",
+    "tags": "clean,remove,untracked"
+  },
+  {
+    "title": "Show commit details",
+    "answer": "git show commit-hash",
+    "category": "git",
+    "tags": "show,commit,details"
+  },
+  {
+    "title": "Find lost commits",
+    "answer": "git reflog",
+    "category": "git",
+    "tags": "reflog,find,lost"
+  },
+  {
+    "title": "Create patch from commit",
+    "answer": "git format-patch -1 commit-hash",
+    "category": "git",
+    "tags": "patch,create,export"
+  },
+  {
+    "title": "Apply patch",
+    "answer": "git apply patch-file.patch",
+    "category": "git",
+    "tags": "patch,apply,import"
+  },
+  {
+    "title": "Revert commit",
+    "answer": "git revert commit-hash",
+    "category": "git",
+    "tags": "revert,undo,commit"
+  }
+]

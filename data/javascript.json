@@ -1,0 +1,278 @@
+[
+  {
+    "title": "Array map",
+    "answer": "array.map(item => item.property)",
+    "category": "javascript",
+    "tags": "array,transform,iterate"
+  },
+  {
+    "title": "Array filter",
+    "answer": "array.filter(item => item.condition)",
+    "category": "javascript",
+    "tags": "array,filter,select"
+  },
+  {
+    "title": "Array reduce",
+    "answer": "array.reduce((acc, item) => acc + item, 0)",
+    "category": "javascript",
+    "tags": "array,reduce,accumulate"
+  },
+  {
+    "title": "Array find",
+    "answer": "array.find(item => item.id === 1)",
+    "category": "javascript",
+    "tags": "array,find,search"
+  },
+  {
+    "title": "Array findIndex",
+    "answer": "array.findIndex(item => item.id === 1)",
+    "category": "javascript",
+    "tags": "array,find,index"
+  },
+  {
+    "title": "Array includes",
+    "answer": "array.includes(value)",
+    "category": "javascript",
+    "tags": "array,includes,check"
+  },
+  {
+    "title": "Array some",
+    "answer": "array.some(item => item.condition)",
+    "category": "javascript",
+    "tags": "array,some,check"
+  },
+  {
+    "title": "Array every",
+    "answer": "array.every(item => item.condition)",
+    "category": "javascript",
+    "tags": "array,every,check"
+  },
+  {
+    "title": "Array flat",
+    "answer": "array.flat(depth)",
+    "category": "javascript",
+    "tags": "array,flat,flatten"
+  },
+  {
+    "title": "Array sort",
+    "answer": "array.sort((a, b) => a - b)",
+    "category": "javascript",
+    "tags": "array,sort,order"
+  },
+  {
+    "title": "Object destructuring",
+    "answer": "const { prop1, prop2 } = object",
+    "category": "javascript",
+    "tags": "object,destructure,extract"
+  },
+  {
+    "title": "Array destructuring",
+    "answer": "const [first, second] = array",
+    "category": "javascript",
+    "tags": "array,destructure,extract"
+  },
+  {
+    "title": "Async function",
+    "answer": "async function fetchData() { await fetch(url); }",
+    "category": "javascript",
+    "tags": "async,await,fetch"
+  },
+  {
+    "title": "Promise",
+    "answer": "new Promise((resolve, reject) => { resolve(data); })",
+    "category": "javascript",
+    "tags": "promise,async,handle"
+  },
+  {
+    "title": "Promise.all",
+    "answer": "Promise.all([promise1, promise2])",
+    "category": "javascript",
+    "tags": "promise,parallel,all"
+  },
+  {
+    "title": "Promise.race",
+    "answer": "Promise.race([promise1, promise2])",
+    "category": "javascript",
+    "tags": "promise,race,first"
+  },
+  {
+    "title": "Fetch API",
+    "answer": "fetch(url).then(res => res.json())",
+    "category": "javascript",
+    "tags": "fetch,api,request"
+  },
+  {
+    "title": "Fetch with options",
+    "answer": "fetch(url, { method: 'POST', body: JSON.stringify(data) })",
+    "category": "javascript",
+    "tags": "fetch,post,options"
+  },
+  {
+    "title": "Spread operator",
+    "answer": "...object",
+    "category": "javascript",
+    "tags": "spread,expand,rest"
+  },
+  {
+    "title": "Rest parameters",
+    "answer": "function func(...args) { }",
+    "category": "javascript",
+    "tags": "rest,params,variadic"
+  },
+  {
+    "title": "Template literal",
+    "answer": "`Hello ${name}`",
+    "category": "javascript",
+    "tags": "template,string,interpolation"
+  },
+  {
+    "title": "Default parameters",
+    "answer": "function func(param = 'default') {}",
+    "category": "javascript",
+    "tags": "default,parameter,function"
+  },
+  {
+    "title": "Arrow function",
+    "answer": "const func = (param) => { return result; }",
+    "category": "javascript",
+    "tags": "arrow,lambda,function"
+  },
+  {
+    "title": "Class definition",
+    "answer": "class ClassName { constructor() {} }",
+    "category": "javascript",
+    "tags": "class,object,define"
+  },
+  {
+    "title": "Class inheritance",
+    "answer": "class Child extends Parent { }",
+    "category": "javascript",
+    "tags": "class,extends,inherit"
+  },
+  {
+    "title": "Try-catch",
+    "answer": "try { code } catch (error) { handler }",
+    "category": "javascript",
+    "tags": "error,handle,try,catch"
+  },
+  {
+    "title": "JSON parse",
+    "answer": "JSON.parse(jsonString)",
+    "category": "javascript",
+    "tags": "json,parse,convert"
+  },
+  {
+    "title": "JSON stringify",
+    "answer": "JSON.stringify(object)",
+    "category": "javascript",
+    "tags": "json,serialize,convert"
+  },
+  {
+    "title": "Local storage set",
+    "answer": "localStorage.setItem('key', 'value')",
+    "category": "javascript",
+    "tags": "storage,local,set"
+  },
+  {
+    "title": "Local storage get",
+    "answer": "localStorage.getItem('key')",
+    "category": "javascript",
+    "tags": "storage,local,get"
+  },
+  {
+    "title": "Event listener",
+    "answer": "element.addEventListener('click', handler)",
+    "category": "javascript",
+    "tags": "event,listen,handle"
+  },
+  {
+    "title": "Remove event listener",
+    "answer": "element.removeEventListener('click', handler)",
+    "category": "javascript",
+    "tags": "event,remove,detach"
+  },
+  {
+    "title": "Set timeout",
+    "answer": "setTimeout(() => { code }, 1000)",
+    "category": "javascript",
+    "tags": "timer,delay,async"
+  },
+  {
+    "title": "Set interval",
+    "answer": "setInterval(() => { code }, 1000)",
+    "category": "javascript",
+    "tags": "timer,interval,repeat"
+  },
+  {
+    "title": "Clear timeout",
+    "answer": "clearTimeout(timeoutId)",
+    "category": "javascript",
+    "tags": "timer,clear,cancel"
+  },
+  {
+    "title": "Clear interval",
+    "answer": "clearInterval(intervalId)",
+    "category": "javascript",
+    "tags": "timer,clear,cancel"
+  },
+  {
+    "title": "Map to object",
+    "answer": "Object.fromEntries(array.map(item => [item.id, item]))",
+    "category": "javascript",
+    "tags": "object,fromentries,convert"
+  },
+  {
+    "title": "Object to array",
+    "answer": "Object.entries(object)",
+    "category": "javascript",
+    "tags": "object,entries,convert"
+  },
+  {
+    "title": "Optional chaining",
+    "answer": "object?.property?.nested",
+    "category": "javascript",
+    "tags": "optional,chain,nullable"
+  },
+  {
+    "title": "Nullish coalescing",
+    "answer": "value ?? 'default'",
+    "category": "javascript",
+    "tags": "nullish,default,fallback"
+  },
+  {
+    "title": "Dynamic import",
+    "answer": "const module = await import('./module.js')",
+    "category": "javascript",
+    "tags": "import,dynamic,lazy"
+  },
+  {
+    "title": "Proxy object",
+    "answer": "new Proxy(target, handler)",
+    "category": "javascript",
+    "tags": "proxy,intercept,meta"
+  },
+  {
+    "title": "WeakMap",
+    "answer": "new WeakMap()",
+    "category": "javascript",
+    "tags": "weakmap,reference,cache"
+  },
+  {
+    "title": "WeakSet",
+    "answer": "new WeakSet()",
+    "category": "javascript",
+    "tags": "weakset,reference,cache"
+  },
+  {
+    "title": "Generator function",
+    "answer": "function* generator() { yield value; }",
+    "category": "javascript",
+    "tags": "generator,yield,iterator"
+  },
+  {
+    "title": "Symbol",
+    "answer": "Symbol('description')",
+    "category": "javascript",
+    "tags": "symbol,unique,identifier"
+  }
+]

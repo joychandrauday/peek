@@ -1,0 +1,212 @@
+[
+  {
+    "title": "List running containers",
+    "answer": "docker ps",
+    "category": "docker",
+    "tags": "list,running,containers"
+  },
+  {
+    "title": "List all containers",
+    "answer": "docker ps -a",
+    "category": "docker",
+    "tags": "list,all,containers"
+  },
+  {
+    "title": "Stop container",
+    "answer": "docker stop container_name",
+    "category": "docker",
+    "tags": "stop,container,halt"
+  },
+  {
+    "title": "Start container",
+    "answer": "docker start container_name",
+    "category": "docker",
+    "tags": "start,container,run"
+  },
+  {
+    "title": "Remove container",
+    "answer": "docker rm container_name",
+    "category": "docker",
+    "tags": "remove,delete,container"
+  },
+  {
+    "title": "Remove unused images",
+    "answer": "docker image prune -a",
+    "category": "docker",
+    "tags": "remove,cleanup,images,unused"
+  },
+  {
+    "title": "Remove stopped containers",
+    "answer": "docker container prune",
+    "category": "docker",
+    "tags": "remove,cleanup,containers,stopped"
+  },
+  {
+    "title": "Remove unused networks",
+    "answer": "docker network prune",
+    "category": "docker",
+    "tags": "remove,cleanup,networks,unused"
+  },
+  {
+    "title": "Full system cleanup",
+    "answer": "docker system prune -a",
+    "category": "docker",
+    "tags": "cleanup,remove,all,system"
+  },
+  {
+    "title": "Build image from Dockerfile",
+    "answer": "docker build -t image_name .",
+    "category": "docker",
+    "tags": "build,image,dockerfile"
+  },
+  {
+    "title": "Build without cache",
+    "answer": "docker build --no-cache -t image_name .",
+    "category": "docker",
+    "tags": "build,image,nocache"
+  },
+  {
+    "title": "Run container",
+    "answer": "docker run -d image_name",
+    "category": "docker",
+    "tags": "run,start,container"
+  },
+  {
+    "title": "Run container with port mapping",
+    "answer": "docker run -d -p 8080:80 image_name",
+    "category": "docker",
+    "tags": "run,port,mapping"
+  },
+  {
+    "title": "Execute command in container",
+    "answer": "docker exec -it container_name bash",
+    "category": "docker",
+    "tags": "exec,shell,enter,container"
+  },
+  {
+    "title": "View container logs",
+    "answer": "docker logs container_name",
+    "category": "docker",
+    "tags": "logs,view,output"
+  },
+  {
+    "title": "Tail container logs",
+    "answer": "docker logs -f container_name",
+    "category": "docker",
+    "tags": "logs,follow,tail"
+  },
+  {
+    "title": "List images",
+    "answer": "docker images",
+    "category": "docker",
+    "tags": "list,images,show"
+  },
+  {
+    "title": "Pull image from registry",
+    "answer": "docker pull image_name",
+    "category": "docker",
+    "tags": "pull,download,image"
+  },
+  {
+    "title": "Push image to registry",
+    "answer": "docker push image_name",
+    "category": "docker",
+    "tags": "push,upload,image"
+  },
+  {
+    "title": "Tag image",
+    "answer": "docker tag image_name username/image_name:tag",
+    "category": "docker",
+    "tags": "tag,rename,image"
+  },
+  {
+    "title": "View Docker Compose services",
+    "answer": "docker-compose ps",
+    "category": "docker",
+    "tags": "compose,services,list"
+  },
+  {
+    "title": "Start Docker Compose",
+    "answer": "docker-compose up -d",
+    "category": "docker",
+    "tags": "compose,start,up"
+  },
+  {
+    "title": "Stop Docker Compose",
+    "answer": "docker-compose down",
+    "category": "docker",
+    "tags": "compose,stop,down"
+  },
+  {
+    "title": "Rebuild Docker Compose",
+    "answer": "docker-compose up -d --build",
+    "category": "docker",
+    "tags": "compose,rebuild,build"
+  },
+  {
+    "title": "View disk usage",
+    "answer": "docker system df",
+    "category": "docker",
+    "tags": "disk,usage,space"
+  },
+  {
+    "title": "Inspect container",
+    "answer": "docker inspect container_name",
+    "category": "docker",
+    "tags": "inspect,details,info"
+  },
+  {
+    "title": "Copy files from container",
+    "answer": "docker cp container_name:/path/to/file /local/path",
+    "category": "docker",
+    "tags": "copy,extract,files"
+  },
+  {
+    "title": "View container processes",
+    "answer": "docker top container_name",
+    "category": "docker",
+    "tags": "top,processes,running"
+  },
+  {
+    "title": "Restart container",
+    "answer": "docker restart container_name",
+    "category": "docker",
+    "tags": "restart,reload,container"
+  },
+  {
+    "title": "Pause container",
+    "answer": "docker pause container_name",
+    "category": "docker",
+    "tags": "pause,suspend,freeze"
+  },
+  {
+    "title": "Unpause container",
+    "answer": "docker unpause container_name",
+    "category": "docker",
+    "tags": "unpause,resume,unfreeze"
+  },
+  {
+    "title": "View container stats",
+    "answer": "docker stats",
+    "category": "docker",
+    "tags": "stats,performance,monitor"
+  },
+  {
+    "title": "List networks",
+    "answer": "docker network ls",
+    "category": "docker",
+    "tags": "network,list,show"
+  },
+  {
+    "title": "Create network",
+    "answer": "docker network create network_name",
+    "category": "docker",
+    "tags": "network,create,new"
+  },
+  {
+    "title": "Connect container to network",
+    "answer": "docker network connect network_name container_name",
+    "category": "docker",
+    "tags": "network,connect,attach"
+  }
+]
